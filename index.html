@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big5性格テスト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Big5性格テスト</h1>
+            <p class="description">
+                以下の質問に1から5の評価でお答えください：<br>
+                1 = 全くそう思わない<br>
+                2 = あまりそう思わない<br>
+                3 = どちらでもない<br>
+                4 = ややそう思う<br>
+                5 = とてもそう思う
+            </p>
+        </header>
+
+        <form id="personalityTest">
+            <div class="questions">
+                <div class="question">
+                    <label>1. よくしゃべる</label>
+                    <div class="rating">
+                        <input type="radio" name="q1" value="1" required>1
+                        <input type="radio" name="q1" value="2">2
+                        <input type="radio" name="q1" value="3">3
+                        <input type="radio" name="q1" value="4">4
+                        <input type="radio" name="q1" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>2. 人の欠点を見つけがち (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q2" value="1" required>1
+                        <input type="radio" name="q2" value="2">2
+                        <input type="radio" name="q2" value="3">3
+                        <input type="radio" name="q2" value="4">4
+                        <input type="radio" name="q2" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>3. 仕事を徹底的にする</label>
+                    <div class="rating">
+                        <input type="radio" name="q3" value="1" required>1
+                        <input type="radio" name="q3" value="2">2
+                        <input type="radio" name="q3" value="3">3
+                        <input type="radio" name="q3" value="4">4
+                        <input type="radio" name="q3" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>4. 憂うつで、ふさぎ込む</label>
+                    <div class="rating">
+                        <input type="radio" name="q4" value="1" required>1
+                        <input type="radio" name="q4" value="2">2
+                        <input type="radio" name="q4" value="3">3
+                        <input type="radio" name="q4" value="4">4
+                        <input type="radio" name="q4" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>5. 独創的で、新しいアイデアを思いつく</label>
+                    <div class="rating">
+                        <input type="radio" name="q5" value="1" required>1
+                        <input type="radio" name="q5" value="2">2
+                        <input type="radio" name="q5" value="3">3
+                        <input type="radio" name="q5" value="4">4
+                        <input type="radio" name="q5" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>6. 控えめで、物静か (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q6" value="1" required>1
+                        <input type="radio" name="q6" value="2">2
+                        <input type="radio" name="q6" value="3">3
+                        <input type="radio" name="q6" value="4">4
+                        <input type="radio" name="q6" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>7. 親切で他人思い</label>
+                    <div class="rating">
+                        <input type="radio" name="q7" value="1" required>1
+                        <input type="radio" name="q7" value="2">2
+                        <input type="radio" name="q7" value="3">3
+                        <input type="radio" name="q7" value="4">4
+                        <input type="radio" name="q7" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>8. やや不注意になることがある (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q8" value="1" required>1
+                        <input type="radio" name="q8" value="2">2
+                        <input type="radio" name="q8" value="3">3
+                        <input type="radio" name="q8" value="4">4
+                        <input type="radio" name="q8" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>9. ストレスにうまく対処できる (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q9" value="1" required>1
+                        <input type="radio" name="q9" value="2">2
+                        <input type="radio" name="q9" value="3">3
+                        <input type="radio" name="q9" value="4">4
+                        <input type="radio" name="q9" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>10. 様々なことに好奇心がある</label>
+                    <div class="rating">
+                        <input type="radio" name="q10" value="1" required>1
+                        <input type="radio" name="q10" value="2">2
+                        <input type="radio" name="q10" value="3">3
+                        <input type="radio" name="q10" value="4">4
+                        <input type="radio" name="q10" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>11. エネルギッシュ</label>
+                    <div class="rating">
+                        <input type="radio" name="q11" value="1" required>1
+                        <input type="radio" name="q11" value="2">2
+                        <input type="radio" name="q11" value="3">3
+                        <input type="radio" name="q11" value="4">4
+                        <input type="radio" name="q11" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>12. 口げんかを始める (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q12" value="1" required>1
+                        <input type="radio" name="q12" value="2">2
+                        <input type="radio" name="q12" value="3">3
+                        <input type="radio" name="q12" value="4">4
+                        <input type="radio" name="q12" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>13. 頼りになる働き手</label>
+                    <div class="rating">
+                        <input type="radio" name="q13" value="1" required>1
+                        <input type="radio" name="q13" value="2">2
+                        <input type="radio" name="q13" value="3">3
+                        <input type="radio" name="q13" value="4">4
+                        <input type="radio" name="q13" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>14. 緊張しやすい</label>
+                    <div class="rating">
+                        <input type="radio" name="q14" value="1" required>1
+                        <input type="radio" name="q14" value="2">2
+                        <input type="radio" name="q14" value="3">3
+                        <input type="radio" name="q14" value="4">4
+                        <input type="radio" name="q14" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>15. 深い思考力を持っている</label>
+                    <div class="rating">
+                        <input type="radio" name="q15" value="1" required>1
+                        <input type="radio" name="q15" value="2">2
+                        <input type="radio" name="q15" value="3">3
+                        <input type="radio" name="q15" value="4">4
+                        <input type="radio" name="q15" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>16. 熱意を生み出す</label>
+                    <div class="rating">
+                        <input type="radio" name="q16" value="1" required>1
+                        <input type="radio" name="q16" value="2">2
+                        <input type="radio" name="q16" value="3">3
+                        <input type="radio" name="q16" value="4">4
+                        <input type="radio" name="q16" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>17. 人を許す心を持っている</label>
+                    <div class="rating">
+                        <input type="radio" name="q17" value="1" required>1
+                        <input type="radio" name="q17" value="2">2
+                        <input type="radio" name="q17" value="3">3
+                        <input type="radio" name="q17" value="4">4
+                        <input type="radio" name="q17" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>18. 物事を整理できない傾向がある (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q18" value="1" required>1
+                        <input type="radio" name="q18" value="2">2
+                        <input type="radio" name="q18" value="3">3
+                        <input type="radio" name="q18" value="4">4
+                        <input type="radio" name="q18" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>19. 心配性</label>
+                    <div class="rating">
+                        <input type="radio" name="q19" value="1" required>1
+                        <input type="radio" name="q19" value="2">2
+                        <input type="radio" name="q19" value="3">3
+                        <input type="radio" name="q19" value="4">4
+                        <input type="radio" name="q19" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>20. 想像力が豊か</label>
+                    <div class="rating">
+                        <input type="radio" name="q20" value="1" required>1
+                        <input type="radio" name="q20" value="2">2
+                        <input type="radio" name="q20" value="3">3
+                        <input type="radio" name="q20" value="4">4
+                        <input type="radio" name="q20" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>21. おとなしい傾向がある (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q21" value="1" required>1
+                        <input type="radio" name="q21" value="2">2
+                        <input type="radio" name="q21" value="3">3
+                        <input type="radio" name="q21" value="4">4
+                        <input type="radio" name="q21" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>22. 一般的に人を信頼する</label>
+                    <div class="rating">
+                        <input type="radio" name="q22" value="1" required>1
+                        <input type="radio" name="q22" value="2">2
+                        <input type="radio" name="q22" value="3">3
+                        <input type="radio" name="q22" value="4">4
+                        <input type="radio" name="q22" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>23. 怠け者になりがち (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q23" value="1" required>1
+                        <input type="radio" name="q23" value="2">2
+                        <input type="radio" name="q23" value="3">3
+                        <input type="radio" name="q23" value="4">4
+                        <input type="radio" name="q23" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>24. 感情的に安定していて、動揺しにくい (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q24" value="1" required>1
+                        <input type="radio" name="q24" value="2">2
+                        <input type="radio" name="q24" value="3">3
+                        <input type="radio" name="q24" value="4">4
+                        <input type="radio" name="q24" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>25. 発明の才がある</label>
+                    <div class="rating">
+                        <input type="radio" name="q25" value="1" required>1
+                        <input type="radio" name="q25" value="2">2
+                        <input type="radio" name="q25" value="3">3
+                        <input type="radio" name="q25" value="4">4
+                        <input type="radio" name="q25" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>26. 自己主張が強い</label>
+                    <div class="rating">
+                        <input type="radio" name="q26" value="1" required>1
+                        <input type="radio" name="q26" value="2">2
+                        <input type="radio" name="q26" value="3">3
+                        <input type="radio" name="q26" value="4">4
+                        <input type="radio" name="q26" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>27. 冷淡で人と距離を置く (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q27" value="1" required>1
+                        <input type="radio" name="q27" value="2">2
+                        <input type="radio" name="q27" value="3">3
+                        <input type="radio" name="q27" value="4">4
+                        <input type="radio" name="q27" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>28. 課題が終わるまで粘り強く取り組む</label>
+                    <div class="rating">
+                        <input type="radio" name="q28" value="1" required>1
+                        <input type="radio" name="q28" value="2">2
+                        <input type="radio" name="q28" value="3">3
+                        <input type="radio" name="q28" value="4">4
+                        <input type="radio" name="q28" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>29. 気分が変わりやすい</label>
+                    <div class="rating">
+                        <input type="radio" name="q29" value="1" required>1
+                        <input type="radio" name="q29" value="2">2
+                        <input type="radio" name="q29" value="3">3
+                        <input type="radio" name="q29" value="4">4
+                        <input type="radio" name="q29" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>30. 芸術的、美的な体験を大切にする</label>
+                    <div class="rating">
+                        <input type="radio" name="q30" value="1" required>1
+                        <input type="radio" name="q30" value="2">2
+                        <input type="radio" name="q30" value="3">3
+                        <input type="radio" name="q30" value="4">4
+                        <input type="radio" name="q30" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>31. 時々、内気で抑制的 (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q31" value="1" required>1
+                        <input type="radio" name="q31" value="2">2
+                        <input type="radio" name="q31" value="3">3
+                        <input type="radio" name="q31" value="4">4
+                        <input type="radio" name="q31" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>32. ほぼ誰に対しても思いやりがある</label>
+                    <div class="rating">
+                        <input type="radio" name="q32" value="1" required>1
+                        <input type="radio" name="q32" value="2">2
+                        <input type="radio" name="q32" value="3">3
+                        <input type="radio" name="q32" value="4">4
+                        <input type="radio" name="q32" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>33. 物事を効率的に行う</label>
+                    <div class="rating">
+                        <input type="radio" name="q33" value="1" required>1
+                        <input type="radio" name="q33" value="2">2
+                        <input type="radio" name="q33" value="3">3
+                        <input type="radio" name="q33" value="4">4
+                        <input type="radio" name="q33" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>34. 緊張した状況でも冷静でいられる (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q34" value="1" required>1
+                        <input type="radio" name="q34" value="2">2
+                        <input type="radio" name="q34" value="3">3
+                        <input type="radio" name="q34" value="4">4
+                        <input type="radio" name="q34" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>35. 日常的な仕事を好む (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q35" value="1" required>1
+                        <input type="radio" name="q35" value="2">2
+                        <input type="radio" name="q35" value="3">3
+                        <input type="radio" name="q35" value="4">4
+                        <input type="radio" name="q35" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>36. 外交的で社交的</label>
+                    <div class="rating">
+                        <input type="radio" name="q36" value="1" required>1
+                        <input type="radio" name="q36" value="2">2
+                        <input type="radio" name="q36" value="3">3
+                        <input type="radio" name="q36" value="4">4
+                        <input type="radio" name="q36" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>37. 時々、無礼になることがある (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q37" value="1" required>1
+                        <input type="radio" name="q37" value="2">2
+                        <input type="radio" name="q37" value="3">3
+                        <input type="radio" name="q37" value="4">4
+                        <input type="radio" name="q37" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>38. 計画を立て、それを実行する</label>
+                    <div class="rating">
+                        <input type="radio" name="q38" value="1" required>1
+                        <input type="radio" name="q38" value="2">2
+                        <input type="radio" name="q38" value="3">3
+                        <input type="radio" name="q38" value="4">4
+                        <input type="radio" name="q38" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>39. 神経質になりやすい</label>
+                    <div class="rating">
+                        <input type="radio" name="q39" value="1" required>1
+                        <input type="radio" name="q39" value="2">2
+                        <input type="radio" name="q39" value="3">3
+                        <input type="radio" name="q39" value="4">4
+                        <input type="radio" name="q39" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>40. アイデアについて考えるのが好き</label>
+                    <div class="rating">
+                        <input type="radio" name="q40" value="1" required>1
+                        <input type="radio" name="q40" value="2">2
+                        <input type="radio" name="q40" value="3">3
+                        <input type="radio" name="q40" value="4">4
+                        <input type="radio" name="q40" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>41. 芸術的な興味が少ない (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q41" value="1" required>1
+                        <input type="radio" name="q41" value="2">2
+                        <input type="radio" name="q41" value="3">3
+                        <input type="radio" name="q41" value="4">4
+                        <input type="radio" name="q41" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>42. 他者と協力することを好む</label>
+                    <div class="rating">
+                        <input type="radio" name="q42" value="1" required>1
+                        <input type="radio" name="q42" value="2">2
+                        <input type="radio" name="q42" value="3">3
+                        <input type="radio" name="q42" value="4">4
+                        <input type="radio" name="q42" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>43. 気が散りやすい (R)</label>
+                    <div class="rating">
+                        <input type="radio" name="q43" value="1" required>1
+                        <input type="radio" name="q43" value="2">2
+                        <input type="radio" name="q43" value="3">3
+                        <input type="radio" name="q43" value="4">4
+                        <input type="radio" name="q43" value="5">5
+                    </div>
+                </div>
+
+                <div class="question">
+                    <label>44. 芸術、音楽、文学に造詣が深い</label>
+                    <div class="rating">
+                        <input type="radio" name="q44" value="1" required>1
+                        <input type="radio" name="q44" value="2">2
+                        <input type="radio" name="q44" value="3">3
+                        <input type="radio" name="q44" value="4">4
+                        <input type="radio" name="q44" value="5">5
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">結果を見る</button>
+        </form>
+
+        <div id="results" class="results hidden">
+            <h2>テスト結果</h2>
+            <div class="result-item">
+                <h3>外向性 (Extraversion):</h3>
+                <div class="score-bar">
+                    <div class="score" id="scoreE"></div>
+                </div>
+                <span class="score-value" id="scoreValueE"></span>
+            </div>
+            <div class="result-item">
+                <h3>調和性 (Agreeableness):</h3>
+                <div class="score-bar">
+                    <div class="score" id="scoreA"></div>
+                </div>
+                <span class="score-value" id="scoreValueA"></span>
+            </div>
+            <div class="result-item">
+                <h3>誠実性 (Conscientiousness):</h3>
+                <div class="score-bar">
+                    <div class="score" id="scoreC"></div>
+                </div>
+                <span class="score-value" id="scoreValueC"></span>
+            </div>
+            <div class="result-item">
+                <h3>神経症傾向 (Neuroticism):</h3>
+                <div class="score-bar">
+                    <div class="score" id="scoreN"></div>
+                </div>
+                <span class="score-value" id="scoreValueN"></span>
+            </div>
+            <div class="result-item">
+                <h3>開放性 (Openness):</h3>
+                <div class="score-bar">
+                    <div class="score" id="scoreO"></div>
+                </div>
+                <span class="score-value" id="scoreValueO"></span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
