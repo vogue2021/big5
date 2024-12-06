@@ -3,7 +3,8 @@ import pandas as pd
 from datetime import datetime
 import os
 
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_url_path='/big5/static')
 
 # 确保results目录存在
 RESULTS_DIR = 'results'
