@@ -16,11 +16,11 @@ def index():
 
 @app.route('/css/<path:path>')
 def send_css(path):
-    return app.send_static_file(f'css/{path}')
+    return app.send_static_file(f'/static/css/{path}')
 
 @app.route('/js/<path:path>')
 def send_js(path):
-    return app.send_static_file(f'js/{path}')
+    return app.send_static_file(f'/static/js/{path}')
 
 @app.route('/save-results', methods=['POST'])
 def save_results():
