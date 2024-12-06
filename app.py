@@ -14,11 +14,11 @@ if not os.path.exists(RESULTS_DIR):
 def index():
     return app.send_static_file('index.html')
 
-@app.route('/css/<path:path>')
+@app.route('static/css/<path:path>')
 def send_css(path):
     return app.send_static_file(f'static/css/{path}')
 
-@app.route('/js/<path:path>')
+@app.route('static/js/<path:path>')
 def send_js(path):
     return app.send_static_file(f'static/js/{path}')
 
