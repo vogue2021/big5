@@ -10,7 +10,7 @@ RESULTS_DIR = 'results'
 if not os.path.exists(RESULTS_DIR):
     os.makedirs(RESULTS_DIR)
 
-@app.route('/')
+@app.route('/big5')
 def index():
     return app.send_static_file('index.html')
 
