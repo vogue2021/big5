@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big5性格テスト</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -512,45 +514,24 @@
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">結果を見る</button>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> 提出する
+            </button>
         </form>
 
         <div id="results" class="results hidden">
-            <h2>テスト結果</h2>
-            <div class="result-item">
-                <h3>外向性 (Extraversion):</h3>
-                <div class="score-bar">
-                    <div class="score" id="scoreE"></div>
-                </div>
-                <span class="score-value" id="scoreValueE"></span>
+            <h2>学習スタイル分析結果</h2>
+            <div class="chart-container">
+                <canvas id="varkChart"></canvas>
             </div>
-            <div class="result-item">
-                <h3>調和性 (Agreeableness):</h3>
-                <div class="score-bar">
-                    <div class="score" id="scoreA"></div>
+            <div class="recommendation-box">
+                <h3>あなたに最適な学習スタイル</h3>
+                <div id="mainStyle" class="main-style">
+                    <!-- JavaScript で動的に追加 -->
                 </div>
-                <span class="score-value" id="scoreValueA"></span>
-            </div>
-            <div class="result-item">
-                <h3>誠実性 (Conscientiousness):</h3>
-                <div class="score-bar">
-                    <div class="score" id="scoreC"></div>
+                <div class="style-description" id="styleDescription">
+                    <!-- JavaScript で動的に追加 -->
                 </div>
-                <span class="score-value" id="scoreValueC"></span>
-            </div>
-            <div class="result-item">
-                <h3>神経症傾向 (Neuroticism):</h3>
-                <div class="score-bar">
-                    <div class="score" id="scoreN"></div>
-                </div>
-                <span class="score-value" id="scoreValueN"></span>
-            </div>
-            <div class="result-item">
-                <h3>開放性 (Openness):</h3>
-                <div class="score-bar">
-                    <div class="score" id="scoreO"></div>
-                </div>
-                <span class="score-value" id="scoreValueO"></span>
             </div>
         </div>
     </div>

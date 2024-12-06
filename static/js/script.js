@@ -39,6 +39,9 @@ const correlationWeights = {
     }
 };
 
+// 在文件顶部添加一个变量来存储图表实例
+let varkChart = null;
+
 document.getElementById('personalityTest').addEventListener('submit', function(e) {
     e.preventDefault();
     const big5Results = calculateResults();
@@ -110,7 +113,7 @@ function displayResults(big5Results, varkResults) {
     // 获取实验者编号
     const experimenterId = document.getElementById('experimenterId').value;
     
-    // 准备要保存的数据
+    // 保存数据到后端
     const resultData = {
         experimenterId: experimenterId,
         timestamp: new Date().toISOString(),
@@ -134,36 +137,85 @@ function displayResults(big5Results, varkResults) {
         console.error('Error saving results:', error);
     });
 
-    // 更新结果显示HTML
-    document.getElementById('results').innerHTML = `
-        <h2>学習スタイル分析結果</h2>
-        <div class="result-item">
-            <h3>Visual (視覚的学習):</h3>
-            <div class="score-bar">
-                <div class="score" style="width: ${varkResults.visual}%"></div>
-            </div>
-            <span class="score-value">${varkResults.visual}%</span>
-        </div>
-        <div class="result-item">
-            <h3>Auditory (聴覚的学習):</h3>
-            <div class="score-bar">
-                <div class="score" style="width: ${varkResults.audio}%"></div>
-            </div>
-            <span class="score-value">${varkResults.audio}%</span>
-        </div>
-        <div class="result-item">
-            <h3>Reading/Writing (読み書き学習):</h3>
-            <div class="score-bar">
-                <div class="score" style="width: ${varkResults.reading}%"></div>
-            </div>
-            <span class="score-value">${varkResults.reading}%</span>
-        </div>
-        <div class="result-item">
-            <h3>Kinesthetic (運動感覚的学習):</h3>
-            <div class="score-bar">
-                <div class="score" style="width: ${varkResults.kinaesthetic}%"></div>
-            </div>
-            <span class="score-value">${varkResults.kinaesthetic}%</span>
-        </div>
-    `;
+    // 创建图表前先销毁旧的图表
+    if (varkChart) {
+        varkChart.destroy();
+    }
+
+    // 创建新图表
+    const ctx = document.getElementById('varkChart').getContext('2d');
+    varkChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Visual', 'Auditory', 'Reading/Writing', 'Kinesthetic'],
+            datasets: [{
+                label: '学習スタイル分布',
+                data: [
+                    varkResults.visual,
+                    varkResults.audio,
+                    varkResults.reading,
+                    varkResults.kinaesthetic
+                ],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(255, 206, 86, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // 找出最高分的学习风格
+    const styles = {
+        visual: {
+            name: '視覚的学習 (Visual)',
+            description: '図表、画像、映像などの視覚的な教材を使用することで最も効果的に学習できます。'
+        },
+        audio: {
+            name: '聴覚的学習 (Auditory)',
+            description: '講義を聴く、ディスカッションする、音声教材を使用することで最も効果的に学習できます。'
+        },
+        reading: {
+            name: '読み書き学習 (Reading/Writing)',
+            description: 'テキストを読んだり、ノートを取ったり、文章を書いたりすることで最も効果的に学習できます。'
+        },
+        kinaesthetic: {
+            name: '運動感覚的学習 (Kinesthetic)',
+            description: '実践的な体験、実験、ハンズオン活動を通じて最も効果的に学習できます。'
+        }
+    };
+
+    // 修改这部分：找出得分最高的学习风格
+    let maxScore = 0;
+    let mainStyle = '';
+    for (const [style, score] of Object.entries(varkResults)) {
+        if (score > maxScore) {
+            maxScore = score;
+            mainStyle = style;
+        }
+    }
+
+    // 表示推荐的学习风格
+    if (mainStyle && styles[mainStyle]) {
+        document.getElementById('mainStyle').innerHTML = `
+            <i class="fas fa-star"></i> ${styles[mainStyle].name}
+        `;
+        document.getElementById('styleDescription').innerHTML = styles[mainStyle].description;
+    }
 } 

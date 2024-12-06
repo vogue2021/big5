@@ -56,12 +56,21 @@ header {
     background: var(--primary-color);
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border-radius: var(--border-radius);
     cursor: pointer;
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #357abd;
 }
 
 .results {
@@ -115,4 +124,40 @@ header {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.chart-container {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recommendation-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-style {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 20px 0;
+    padding: 15px;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.style-description {
+    line-height: 1.6;
+    color: #666;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
 } 
