@@ -16,7 +16,7 @@ const correlationWeights = {
     conscientiousness: {
         visual: 0.70,
         audio: 0.74,
-        reading: 0.93,
+        reading: 0.73,
         kinaesthetic: 0.65
     },
     extraversion: {
